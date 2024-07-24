@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Menu from './MenuComponent';
 import Inform from './InformComponent';
 import Home from './HomeComponent';
 import { Routes, Route, Navigate } from 'react-router-dom';
@@ -11,12 +10,14 @@ import Login from './LoginComponent';
 import Myprofile from './MyprofileComponent';
 import Mycart from './MycartComponent';
 import Myorders from './MyordersComponent';
+import Header from './HeaderComponent'; // Giả sử Header nằm trong cùng thư mục
 
 class Main extends Component {
   render() {
     return (
       <div className="body-customer">
-        <Menu />
+
+        <Header /> {}
         <Inform />
         <Routes>
           <Route path='/' element={<Navigate replace to='/home' />} />

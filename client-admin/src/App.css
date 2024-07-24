@@ -1,10 +1,12 @@
 /* styles.css */
 .body-customer {
+  background-color: #ffeeaa;
   width: 1150px;
   height: fit-content;
   margin: 0px auto;
 }
 .body-admin {
+  background-color: #ffeeaa;
   width: fit-content;
   height: fit-content;
   margin: 0px auto;
@@ -86,4 +88,33 @@ tr:not(:first-child):nth-child(odd).datatable {
 tr:not(:first-child):hover.datatable {
   background-color: #dcfcfc;
   cursor: pointer;
+}
+/* app.css */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eec317; /* Replace with your preferred color code */
+  padding: 10px 20px; /* Add some padding for aesthetics (optional) */
+}
+
+ul.menu {
+  margin: 0px;
+  padding: 0px;
+  display: flex; /* Sử dụng Flexbox */
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc (tùy chọn) */
+}
+
+li.menu {
+  display: inline;
+  margin-right: 20px; /* Giữ khoảng cách giữa các mục (tùy chọn) */
+  text-transform: uppercase;
+  border-right: 1px solid #ccc; /* Thêm đường viền bên phải cho mỗi mục */
+  padding-right: 10px; /* Thêm đệm bên phải để tránh nội dung chồng lên đường viền */
+}
+
+ul.menu li:last-child {
+  border-right: none; /* Xóa đường viền bên phải cho mục menu cuối cùng */
 }

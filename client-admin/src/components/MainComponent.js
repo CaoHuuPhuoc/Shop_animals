@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import MyContext from '../contexts/MyContext';
-import Menu from './MenuComponent';
 import Home from './HomeComponent';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Category from './CategoryComponent';
 import Product from './ProductComponent';
 import Order from './OrderComponent';
 import Customer from './CustomerComponent';
+import Header from './HeaderComponent'; // Giả sử Header nằm trong cùng thư mục
 
 class Main extends Component {
   static contextType = MyContext; // using this.context to access global state
@@ -14,7 +14,7 @@ class Main extends Component {
     if (this.context.token !== '') {
       return (
         <div className="body-admin">
-          <Menu />
+          <Header /> {}
           <Routes>
             <Route path='/admin' element={<Navigate replace to='/admin/home' />} />
             <Route path='/admin/home' element={<Home />} />

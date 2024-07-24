@@ -9,6 +9,7 @@ const ProductDAO = require('../models/ProductDAO');
 const OrderDAO = require('../models/OrderDAO');
 const CustomerDAO = require('../models/CustomerDAO');
 const EmailUtil = require('../utils/EmailUtil');
+
 // category
 router.post('/categories', JwtUtil.checkToken, async function (req, res) {
   const name = req.body.name;
@@ -135,4 +136,5 @@ router.get('/orders/customer/:cid', JwtUtil.checkToken, async function (req, res
   const orders = await OrderDAO.selectByCustID(_cid);
   res.json(orders);
 });
+
 module.exports = router;

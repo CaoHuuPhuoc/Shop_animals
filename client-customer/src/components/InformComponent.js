@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MyContext from '../contexts/MyContext';
 
+
 class Inform extends Component {
   static contextType = MyContext; // using this.context to access global state
   render() {
